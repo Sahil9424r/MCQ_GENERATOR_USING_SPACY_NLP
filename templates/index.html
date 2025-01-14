@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate MCQs</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling for the form container */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        /* Title styling */
+        h1 {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Label and input field styling */
+        label {
+            font-size: 1rem;
+            color: #555;
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input[type="file"] {
+            font-size: 1rem;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Generate MCQs</h1>
+        <form action="/generate_mcqs/" method="post" enctype="multipart/form-data">
+            <label for="file">Upload File (TXT or PDF):</label>
+            <input type="file" id="file" name="file" accept=".txt, .pdf"><br><br>
+            <button type="submit">Generate MCQs</button>
+        </form>
+    </div>
+</body>
+</html>
